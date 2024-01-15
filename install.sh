@@ -7,7 +7,7 @@ backup() {
   if [ -e "$target" ]; then
     if [ ! -L "$target" ]; then
       mv "$target" "$target.backup"
-      echo "-----> Moved your old $target config file to $target.backup"
+      echo "-----> Moved your old $target config file to ${target}_$(date +%Y%m%d)"
     fi
   fi
 }
